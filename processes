@@ -1,0 +1,35 @@
+#!/bin/bash
+
+DECOMPOSE_PROCESSES=('hello_world' 'params' 'root_directory')
+
+hello_world() {
+  echo "Hello World!"
+}
+
+hello_world_help() {
+  cat <<HELP_EOF
+  Hello World Help
+  This is an example help file
+  Notice the indentions
+HELP_EOF
+}
+
+params() {
+  echo "$@"
+  echo $4
+}
+
+params_help() {
+  echo "  Prints parameters"
+}
+
+root_directory() {
+  local project_root_dir
+  decompose-project-root project_root_dir
+
+  echo $project_root_dir
+}
+
+root_directory_help() {
+  echo "  Prints the project root directory"
+}
