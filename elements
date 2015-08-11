@@ -1,0 +1,3 @@
+#!/bin/bash
+export PROJECT_ENVIRONMENT="production"
+export PROJECT_RANDOM_SETTING="12345"
