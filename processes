@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DECOMPOSE_PROCESSES=('hello_world' 'params' 'root_directory')
+DECOMPOSE_PROCESSES=('hello_world' 'params' 'root_directory' 'environment')
 
 hello_world() {
   echo "Hello World!"
@@ -32,4 +32,12 @@ root_directory() {
 
 root_directory_help() {
   echo "  Prints the project root directory"
+}
+
+environment() {
+  echo $PROJECT_ENVIRONMENT
+}
+
+environment_help() {
+  echo "  Print current environment"
 }
