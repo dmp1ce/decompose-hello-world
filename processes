@@ -25,7 +25,7 @@ params_help() {
 
 root_directory() {
   local project_root_dir
-  decompose-project-root project_root_dir
+  _decompose-project-root project_root_dir
 
   echo $project_root_dir
 }
