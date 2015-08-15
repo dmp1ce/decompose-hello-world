@@ -7,6 +7,7 @@ export ELEMENTS_POST_PROCESS=( 'example_post_process' 'hello_world' )
 
 # Example of post processing the elements set above to create new elements
 # for the templating engine to work with.
+# Functions are prefixed with '_decompose-elements-'
 _decompose-elements-example_post_process() {
   # Set a new element
   export POST_PROCESSED="Testing 123"
