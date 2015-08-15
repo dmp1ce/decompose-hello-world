@@ -20,7 +20,7 @@ _decompose-elements-example_post_process() {
   fi
 }
 
-# Just prints 'hello_world'
+# Just prints 'Hello World!' when uncommented out
 _decompose-elements-hello_world() {
-  echo "Hello World!"
+  #echo "Hello World!"
 }
