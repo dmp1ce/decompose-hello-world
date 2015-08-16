@@ -2,11 +2,13 @@
 
 DECOMPOSE_PROCESSES=('hello_world' 'params' 'root_directory' 'environment')
 
-hello_world() {
+# Prefix process names with '_decompose-process-' to avoid naming collisions
+
+_decompose-process-hello_world() {
   echo "Hello World!"
 }
 
-hello_world_help() {
+_decompose-process-hello_world_help() {
   cat <<HELP_EOF
   Hello World Help
   This is an example help file
@@ -14,30 +16,30 @@ hello_world_help() {
 HELP_EOF
 }
 
-params() {
+_decompose-process-params() {
   echo "$@"
   echo $4
 }
 
-params_help() {
+_decompose-process-params_help() {
   echo "  Prints parameters"
 }
 
-root_directory() {
+_decompose-process-root_directory() {
   local project_root_dir
   _decompose-project-root project_root_dir
 
   echo $project_root_dir
 }
 
-root_directory_help() {
+_decompose-process-root_directory_help() {
   echo "  Prints the project root directory"
 }
 
-environment() {
+_decompose-process-environment() {
   echo $PROJECT_ENVIRONMENT
 }
 
-environment_help() {
+_decompose-process-environment_help() {
   echo "  Print current environment"
 }
